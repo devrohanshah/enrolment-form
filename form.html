@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Ragatsewa - Enrollment Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="form-header">
+            <h1>Join Ragatsewa</h1>
+            <p>Be part of our mission to serve the community</p>
+        </header>
+
+        <form id="enrollmentForm" action="submit.php" method="POST" enctype="multipart/form-data">
+            <!-- Section 1: Personal Information -->
+            <section class="form-section">
+                <h2 class="section-title">
+                    <span class="section-indicator red"></span>
+                    Personal Information
+                </h2>
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="male" required>
+                            <span class="radio-custom"></span>
+                            Male
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="female" required>
+                            <span class="radio-custom"></span>
+                            Female
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="other" required>
+                            <span class="radio-custom"></span>
+                            Other
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dateOfBirth">Date of Birth *</label>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="province">Province *</label>
+                        <select id="province" name="province" required>
+                            <option value="">Select Province</option>
+                            <option value="koshi">Koshi Province</option>
+                            <option value="madhesh">Madhesh Province</option>
+                            <option value="bagmati">Bagmati Province</option>
+                            <option value="gandaki">Gandaki Province</option>
+                            <option value="lumbini">Lumbini Province</option>
+                            <option value="karnali">Karnali Province</option>
+                            <option value="sudurpashchim">Sudurpashchim Province</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="district">District *</label>
+                        <input type="text" id="district" name="district" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="municipality">Municipality *</label>
+                    <input type="text" id="municipality" name="municipality" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="permanentAddress">Permanent Address</label>
+                    <textarea id="permanentAddress" name="permanentAddress" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="profilePicture">Profile Picture</label>
+                    <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+                </div>
+            </section>
+
+            <!-- Section 2: Academic & Professional Background -->
+            <section class="form-section">
+                <h2 class="section-title">
+                    <span class="section-indicator blue"></span>
+                    Academic & Professional Background
+                </h2>
+
+                <div class="form-group">
+                    <label for="education">Educational Qualification *</label>
+                    <select id="education" name="education" required>
+                        <option value="">Select Qualification</option>
+                        <option value="slc">SLC/SEE</option>
+                        <option value="plus2">Plus Two/Intermediate</option>
+                        <option value="bachelor">Bachelor's Degree</option>
+                        <option value="master">Master's Degree</option>
+                        <option value="phd">PhD</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="institution">Institution Name *</label>
+                    <input type="text" id="institution" name="institution" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="occupation">Occupation *</label>
+                    <select id="occupation" name="occupation" required>
+                        <option value="">Select Occupation</option>
+                        <option value="student">Student</option>
+                        <option value="working">Working Professional</option>
+                        <option value="freelancer">Freelancer</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fieldOfWork">Field of Study/Work</label>
+                    <input type="text" id="fieldOfWork" name="fieldOfWork">
+                </div>
+
+                <div class="form-group">
+                    <label>Languages Known *</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages[]" value="nepali">
+                            <span class="checkbox-custom"></span>
+                            Nepali
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages[]" value="english">
+                            <span class="checkbox-custom"></span>
+                            English
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages[]" value="maithili">
+                            <span class="checkbox-custom"></span>
+                            Maithili
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages[]" value="other">
+                            <span class="checkbox-custom"></span>
+                            Other
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Role Interest -->
+            <section class="form-section">
+                <h2 class="section-title">
+                    <span class="section-indicator green"></span>
+                    Role Interest
+                </h2>
+
+                <div class="form-group">
+                    <label>Interested Team(s) *</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="teams[]" value="executive">
+                            <span class="checkbox-custom"></span>
+                            Executive Committee
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="teams[]" value="technical">
+                            <span class="checkbox-custom"></span>
+                            Technical
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="teams[]" value="media">
+                            <span class="checkbox-custom"></span>
+                            Media
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="teams[]" value="social-media">
+                            <span class="checkbox-custom"></span>
+                            Social Media
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="teams[]" value="event">
+                            <span class="checkbox-custom"></span>
+                            Event
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="teams[]" value="volunteer">
+                            <span class="checkbox-custom"></span>
+                            Volunteer
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="teams[]" value="donor">
+                            <span class="checkbox-custom"></span>
+                            Donor Coordinator
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="teams[]" value="medical">
+                            <span class="checkbox-custom"></span>
+                            Medical
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="teams[]" value="other">
+                            <span class="checkbox-custom"></span>
+                            Other
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Past Social Work Involvement *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="pastWork" value="yes" required>
+                            <span class="radio-custom"></span>
+                            Yes
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="pastWork" value="no" required>
+                            <span class="radio-custom"></span>
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group" id="pastWorkDetails" style="display: none;">
+                    <label for="pastWorkDescription">Please describe your past social work experience</label>
+                    <textarea id="pastWorkDescription" name="pastWorkDescription" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivation">Motivation to Join Ragatsewa *</label>
+                    <textarea id="motivation" name="motivation" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Weekly Time Commitment *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="timeCommitment" value="1-5" required>
+                            <span class="radio-custom"></span>
+                            1-5 hours
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="timeCommitment" value="5-10" required>
+                            <span class="radio-custom"></span>
+                            5-10 hours
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="timeCommitment" value="10+" required>
+                            <span class="radio-custom"></span>
+                            10+ hours
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Technical Skills -->
+            <section class="form-section">
+                <h2 class="section-title">
+                    <span class="section-indicator yellow"></span>
+                    Technical Skills
+                </h2>
+
+                <div class="form-group">
+                    <label>Skills</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills[]" value="web-dev">
+                            <span class="checkbox-custom"></span>
+                            Web Development
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills[]" value="app-dev">
+                            <span class="checkbox-custom"></span>
+                            App Development
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills[]" value="video-editing">
+                            <span class="checkbox-custom"></span>
+                            Video Editing
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills[]" value="graphic-design">
+                            <span class="checkbox-custom"></span>
+                            Graphic Design
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills[]" value="content-writing">
+                            <span class="checkbox-custom"></span>
+                            Content Writing
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills[]" value="social-media-mgmt">
+                            <span class="checkbox-custom"></span>
+                            Social Media Management
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills[]" value="photography">
+                            <span class="checkbox-custom"></span>
+                            Photography
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills[]" value="public-speaking">
+                            <span class="checkbox-custom"></span>
+                            Public Speaking
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills[]" value="fundraising">
+                            <span class="checkbox-custom"></span>
+                            Fundraising
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="portfolio">Portfolio URL (Optional)</label>
+                    <input type="url" id="portfolio" name="portfolio" placeholder="https://example.com">
+                </div>
+            </section>
+
+            <!-- Section 5: Availability & Agreement -->
+            <section class="form-section">
+                <h2 class="section-title">
+                    <span class="section-indicator brown"></span>
+                    Availability & Agreement
+                </h2>
+
+                <div class="form-group">
+                    <label>Available for team meetings? *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="availability" value="yes" required>
+                            <span class="radio-custom"></span>
+                            Yes
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="availability" value="no" required>
+                            <span class="radio-custom"></span>
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label agreement-checkbox">
+                        <input type="checkbox" name="agreement" required>
+                        <span class="checkbox-custom"></span>
+                        I agree to the terms and contribution rules of Ragatsewa *
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalNotes">Additional Notes</label>
+                    <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Any additional information you'd like to share..."></textarea>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Submit Application</span>
+                    <div class="loading-spinner" style="display: none;"></div>
+                </button>
+            </div>
+        </form>
+
+        <div id="successMessage" class="success-message" style="display: none;">
+            <h3>Application Submitted Successfully!</h3>
+            <p>Thank you for your interest in joining Ragatsewa. We will review your application and get back to you soon.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
